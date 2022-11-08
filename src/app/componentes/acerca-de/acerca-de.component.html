@@ -1,15 +1,41 @@
-<div class="mat-card text-dark bg-light mb-3">
-    <div class="row">
-      <h3>{{persona.apellido}}</h3>
-      <div class="col ">
-        <div class="card-titles">
-          <h2>Acerca de</h2>
-          <p>{{persona.nombre}}</p>
-        </div>
-        <div>
-          <p id="text-acercade">Estudiante de programación Web Full Stack Junior.</p>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quaerat modi! Sit sequi voluptates nemo? Accusamus aspernatur molestias perferendis eligendi voluptate minus recusandae accusantium. Quaerat ducimus fugit quisquam unde maxime.</p>
-      </div>
-    </div>
+<div class="mat-card bg-light" id="first-card">
+  <img id="img-portada" src="../../../assets/yan-blanco-pier002.jpg" class="img-fluid profile-background" />
+  <div id="info-img">
+    <img class="rounded-circle profile-image align-items-center" src="{{ persona.img }}" alt="Foto de perfil" />
+    <a routerLink="/editacercade/1" *ngIf="isLogged" class="flush-collapse Two text-dark text-decoration-none">
+      <i class="fa fa-pen" aria-hidden="true"></i>
+    </a>
+  
+     
+   
   </div>
+  <div id="info-data" class="d-flex justify-content-between">
+    
+      
+        
+          <div class="p-2">
+            <h1>{{ persona.nombre }} {{ persona.apellido }}</h1>
+      
+            <h5>{{ persona.descripcion }}</h5>
+            <span><a href="mailto:janderssen@protonmail.com" class="text-decoration-none text-align link-dark">
+                janderssen@protonmail.com</a></span>
+          </div>
+       
+          <div class="ms-auto p-2">
+            
+            <a id="argprog" href="https://argentinaprograma.inti.gob.ar/"
+              class="text-dark text-decoration-none text-align" style="float: right; width: fit-content">
+              <img src="../../../assets/terminal-fill.svg" class="botonLogoInstitucion" width="60" height="60" />
+              <p class="text-end d-inline" style="color: rgb(67, 163, 253)">
+                <strong> Argentina Programa</strong>
+              </p>
+            </a>
+          </div>
+        
+
+      
+      <br />
+      <br />
+    </div>
+  
+</div>

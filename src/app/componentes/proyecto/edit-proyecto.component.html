@@ -6,16 +6,20 @@
                     <div class="card-body p-5 text-center">
                         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                             <div class="form-group">
-                                <label for="nombre">Nombre de la Skill</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="skill.nombre" required>
+                                <label for="nombreP">Nombre del Proyecto</label>
+                                <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyecto.nombreP" required>
                             </div>
                             <div class="form-group">
-                                <label for="descripcionE">Ingrese el porcentaje</label>
-                                <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
+                                <label for="descripcionP">Descripción</label>
+                                <input type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyecto.descripcionP" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcionP">URL de la imagen</label>
+                                <input type="text" class="form-control" id="img" name="img" [(ngModel)]="proyecto.img" required>
                             </div>
                             <br>
                             <button class="btn btn-success shadow">
-                                Actualizar
+                                Modificar proyecto
                             </button>
                         </form>
                     </div>

@@ -1,14 +1,17 @@
-<div class="mat-card text-dark bg-light mb-3">
+<div class="card mat-card">
   <div class="row">
+
     <h1>Educación</h1>
+
     <div class="col-lg-2">
-      <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
-        Agregar educación
+      <button type="button" class="btn btn-success shadow position-absolute top-0 start-50 translate-middle"
+        routerLink="/nuevaedu" *ngIf="isLogged">
+        + Agregar educación
       </button>
     </div>
 
-    <div class="col lg 1"></div>
-    <div class="col-lg-md-sd">
+
+     <div class="col-lg-md-sd">
       <table class="table">
         <tbody>
           <tr *ngFor="let Educacion of educacion">
@@ -17,17 +20,20 @@
             </td>
             <td>{{Educacion.descripcionE}}</td>
             <td *ngIf="isLogged">
-              <button class="btn btn-ligh" routerLink="/editedu/{{Educacion.id}}"><i
-                  class="bi bi-pencil"></i>
-                Editar</button> 
+              <button class="btn btn-ligh" routerLink="/editedu/{{Educacion.id}}"><i class="fa fa-pen"></i>
+              </button> 
               </td>
 
             <td *ngIf="isLogged">
-              <button class="btn btn-danger" (click)="delete(Educacion.id)">
-                <i class="bi bi-x-square"></i> Borrar</button></td>
+              <button class="btn btn-light" (click)="delete(Educacion.id)">
+                <i class="bi bi-trash-fill"></i></button></td>
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> 
+
+  
+
+
+
   </div>
-</div>

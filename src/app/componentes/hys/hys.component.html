@@ -3,7 +3,7 @@
 
         <h1>Hard & Soft Skill</h1>
         <div class="col-lg2">
-            <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+            <button type="button" routerLink="/newskill" class="btn btn-success shadow position-absolute top-0 start-50 translate-middle" *ngIf="isLogged">+ Agregar skill</button>
         </div>
         
         <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
@@ -29,10 +29,10 @@
             <div>
                 <td *ngIf="isLogged">
                     <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
-                        <i class="bi bi-pencil-fill"></i></button>
+                        <i class="fa fa-pen"></i></button>
                 </td>
                 <td *ngIf="isLogged">
-                    <button class="btn btn-danger" (click)="delete(skill.id)">
+                    <button class="btn btn-light" (click)="delete(skill.id)">
                         <i class="bi bi-trash-fill"></i></button>
                 </td>
             </div>

@@ -9,7 +9,7 @@ import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { HysComponent } from './componentes/hys/hys.component';
-import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
@@ -23,6 +23,12 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EditSkillComponent } from './componentes/hys/edit-skill.component';
 import { NewSkillComponent } from './componentes/hys/new-skill.component';
 import { interceptorProvider } from './service/interceptor.service';
+import { EditAcercaDeComponent } from './componentes/acerca-de/edit-acerca-de.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { EditProyectoComponent } from './componentes/proyecto/edit-proyecto.component';
+import { NewProyectoComponent } from './componentes/proyecto/new-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +39,7 @@ import { interceptorProvider } from './service/interceptor.service';
     ExperienciaComponent,
     EducacionComponent,
     HysComponent,
-    ProyectosComponent,
+    ProyectoComponent,
     FooterComponent,
     HomeComponent,
     LoginComponent,
@@ -42,7 +48,10 @@ import { interceptorProvider } from './service/interceptor.service';
     NeweducacionComponent,
     EditeducacionComponent,
     EditSkillComponent,
-    NewSkillComponent
+    NewSkillComponent,
+    EditAcercaDeComponent,
+    EditProyectoComponent,
+    NewProyectoComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +59,9 @@ import { interceptorProvider } from './service/interceptor.service';
     HttpClientModule,
     FormsModule,
     NgCircleProgressModule.forRoot({}),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider

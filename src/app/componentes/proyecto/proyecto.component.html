@@ -1,0 +1,29 @@
+<div class="card mat-card">
+  <div class="row">
+    <h1>Proyectos</h1>
+    <div class="contenedor"> 
+      <button type="button" class="btn btn-success shadow position-absolute top-0 start-50 translate-middle" routerLink="/newproyect/" *ngIf="isLogged">
+        + Agregar proyecto
+      </button>
+      <tr *ngFor="let Proyecto of proyecto">
+        <div>
+          <h3>{{Proyecto.nombreP}}</h3>
+        </div>
+        <img src={{Proyecto.img}} class="img-fluid shadow mb-2 p-3 bg-body">
+        <br>
+        <br>
+        <p>{{Proyecto.descripcionP}}</p>
+        <br>
+        <td *ngIf="isLogged">
+          <button class="btn btn-ligh" routerLink="/editproyect/{{Proyecto.id}}"><i class="fa fa-pen"></i>
+          </button>
+        </td>
+        <td *ngIf="isLogged">
+          <button class="btn btn-light" (click)="delete(Proyecto.id)">
+            <i class="bi bi-trash-fill"></i></button>
+        </td>
+      </tr>
+      <td>
+    </div>
+  </div>
+</div>
