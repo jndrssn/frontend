@@ -10,6 +10,7 @@
             <circle-progress 
             [percent]="(skill.porcentaje)" 
             [radius]="90" [imageSrc]="''" 
+            [outerStrokeGradient]= "true"
             [title]="(skill.nombre)"
             [titleColor]="'#212F3C'"
             [showTitle]="true" 
@@ -19,9 +20,10 @@
             [showUnits]="false"
             [showSubtitle]="false" 
             [outerStrokeWidth]="16" 
-            [innerStrokeWidth]="2" 
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'" 
+            [innerStrokeWidth]="4" 
+            [outerStrokeColor]="'#4882c2'"
+            [outerStrokeGradientStopColor]= "'  #f3702f  '"
+            [innerStrokeColor]="'#e7e8ea'" 
             [animation]="true" 
             [animationDuration]="600">
             </circle-progress>
